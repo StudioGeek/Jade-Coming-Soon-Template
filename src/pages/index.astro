@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import JadeTitle from '../components/JadeTitle.astro';
 import JadeSlogan from '../components/JadeSlogan.astro';
 import Counter from "../react/Counter.tsx";
+import ProgressBar from "../react/ProgressBar";
 ---
 
 <Layout title="Jade Coming Soon Template">
@@ -11,13 +12,7 @@ import Counter from "../react/Counter.tsx";
 			<JadeTitle>Coming Soon</JadeTitle>
 			<JadeSlogan>¡We're working hard in something amazing!</JadeSlogan>
 			<Counter date="2025-12-01"/>
-			<div class="progress-bar">
-				<div class="progress-bar-shadow">
-					<div class="progress-bar-progress">
-						20%
-					</div>
-				</div>
-			</div>
+			<ProgressBar percentage={50}/>
 			<div class="description">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut blanditiis consequatur dolorem ea eligendi exercitationem harum libero magnam maiores natus nemo nisi nulla, pariatur, quae reprehenderit sit voluptates.
 			</div>
