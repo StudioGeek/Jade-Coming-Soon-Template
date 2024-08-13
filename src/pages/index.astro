@@ -4,6 +4,9 @@ import JadeTitle from '../components/JadeTitle.astro';
 import JadeSlogan from '../components/JadeSlogan.astro';
 import Counter from "../react/Counter.tsx";
 import ProgressBar from "../react/ProgressBar";
+import JadeDescription from '../components/JadeDescription.astro';
+import JadeNotifyInput from '../components/JadeNotifyInput.astro';
+import JadeButton from '../components/JadeButton.astro';
 ---
 
 <Layout title="Jade Coming Soon Template">
@@ -12,15 +15,11 @@ import ProgressBar from "../react/ProgressBar";
 			<JadeTitle>Coming Soon</JadeTitle>
 			<JadeSlogan>¡We're working hard in something amazing!</JadeSlogan>
 			<Counter date="2025-12-01"/>
-			<ProgressBar percentage={50}/>
-			<div class="description">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque aut blanditiis consequatur dolorem ea eligendi exercitationem harum libero magnam maiores natus nemo nisi nulla, pariatur, quae reprehenderit sit voluptates.
-			</div>
-			<div class="notify-me">
-				input with search button
-			</div>
+			<ProgressBar percentage={35}/>
+			<JadeDescription/>
+			<JadeNotifyInput/>
 			<div>
-				<button>More information</button>
+				<JadeButton type="primary"/>
 			</div>
 		</div>
 		<div class="hidden">
