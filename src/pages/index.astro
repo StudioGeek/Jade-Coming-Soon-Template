@@ -18,30 +18,44 @@ import JadeButton from '../components/JadeButton.astro';
 			<ProgressBar percentage={35}/>
 			<JadeDescription/>
 			<JadeNotifyInput/>
-			<div>
+			<div class="mt-10 text-center">
 				<JadeButton type="primary"/>
 			</div>
 		</div>
-		<div class="hidden">
-			<div class="about">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum est ex, facere iste laborum laudantium maiores minus nihil obcaecati porro quaerat quia repellat sequi tempore, vel! Ad libero perferendis tempore?
+		<div id="more-information" class="hidden absolute top-0 left-0 w-screen h-screen bg-semantic">
+			<div class="title">
+				<h1 class="text-3xl flex justify-between mb-3 pl-2">
+					Information
+					<button class="px-4 hover:text-neutral transition-all">X</button>
+				</h1>
+			</div>
+			<div class="about lato-regular my-2 p-2">
+				I’m a passionate developer dedicated to turning ideas into effective technological solutions. With experience in software development and a focus on quality and innovation, I strive to create applications that exceed expectations. My goal is to deliver creative and functional products while staying at the forefront of the latest technologies.
 			</div>
 			<div class="contact">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus ad animi atque, debitis distinctio esse iusto nulla praesentium quam repellat unde voluptas, voluptatem. Cum eaque eos minus nihil quas.
-				<div class="responsable">
-					<h5>John Doe</h5>
-					<p>Position</p>
-					<a href="mailto:ivan.alvarado@studiogeek">johndoe@coming.soon</a>
-					<figure>
-						<img alt="avatar-image" src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"/>
-					</figure>
+				<div class="lato-regular p-2">
+					When I’m not coding, you’ll find me exploring new tech trends, reading sci-fi novels, or tinkering with the latest gadgets. I’m an avid gamer and enjoy diving into complex strategies and immersive worlds. I also have a passion for outdoor adventures and love hiking to unwind and recharge. Balancing my tech interests with a love for nature keeps me inspired and motivated in both my personal and professional life.
 				</div>
-			</div>
-			<div class="address">
-				<div class="map">
-					aqui el mapa
+				<div class="responsable p-2 flex flex-row">
+					<div class="w-1/4">
+						<figure class="w-full rounded-md overflow-hidden">
+							<img class="w-full" alt="avatar-image" src="/img/avatar.jpeg"/>
+						</figure>
+					</div>
+					<div class="w-3/4 p-2 lato-regular flex flex-col">
+						<h5 class="lato-bold">Ivan Alvarado</h5>
+						<p class="lato-regular text-dark">Fullstack Developer</p>
+						<a class="text-neutral text-xs" href="mailto:ivan.alvarado@studiogeek.com.mx">ivan.alvarado@studiogeek.com.mx</a>
+						<a class="text-neutral text-xs" href="https://www.linkedin.com/in/atxy2k/">Linked.in</a>
+						<a class="text-neutral text-xs" href="https://x.com/angrydevelopr">X</a>
+					</div>
 				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illo incidunt ipsum molestias natus neque omnis perferendis praesentium quae sequi? Ducimus, perspiciatis, quis? Autem error expedita ipsum maiores minima voluptas!</p>
+				<div class="mt-2 p-2">
+					<p>Address</p>
+					<p class="lato-regular text-sm">123 Tech Avenue, Suite 456</p>
+					<p class="lato-regular text-sm">Innovation City, CA 98765</p>
+					<p class="lato-regular text-sm">USA</p>
+				</div>
 			</div>
 		</div>
 	</main>
