@@ -14,14 +14,16 @@ import MoreInformation from '../components/MoreInformation.astro';
 	<main class="z-10">
 		<div class="w-[100vw] h-[100vh] bg-star-bg color text-semantic flex flex-col justify-center text-center">
 			<canvas class="w-[100vw] h-[100vh] absolute top-0 left-0" id="background"></canvas>
-			<JadeTitle>Coming Soon</JadeTitle>
-			<JadeSlogan>¡We're working hard in something amazing!</JadeSlogan>
-			<Counter date="2025-12-01"/>
-			<ProgressBar percentage={35}/>
-			<JadeDescription/>
-			<JadeNotifyInput/>
-			<div class="mt-10 text-center z-10">
-				<JadeButton type="primary" id="btn-show-information"/>
+			<div class="z-10 w-[100%] md:w-[50%] md:flex md:flex-col md:mx-auto lg:w-[600px]">
+				<JadeTitle>Coming Soon</JadeTitle>
+				<JadeSlogan>¡We're working hard in something amazing!</JadeSlogan>
+				<Counter date="2025-12-01"/>
+				<ProgressBar percentage={35}/>
+				<JadeDescription/>
+				<JadeNotifyInput/>
+				<div class="mt-10 text-center z-10">
+					<JadeButton type="primary" id="btn-show-information"/>
+				</div>
 			</div>
 		</div>
 		<MoreInformation/>
@@ -41,12 +43,13 @@ import MoreInformation from '../components/MoreInformation.astro';
 			moreInformation.classList.add('animate__fadeIn');
 		});
 		btnCloseMoreInformation.addEventListener('click', function(){
+			moreInformation.classList.add('animate__animated');
 			moreInformation.classList.add('animate__fadeOut')
 			setTimeout(() => {
 				moreInformation.classList.add('hidden');
 				moreInformation.classList.remove('animate__animated');
-				moreInformation.classList.remove('animate__fadeIn');
-			}, 1000);
+				moreInformation.classList.remove('animate__fadeOut');
+			}, 500);
 		});
 
 		if(background_type === 'stars')
