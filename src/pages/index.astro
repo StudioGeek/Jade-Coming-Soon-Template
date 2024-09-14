@@ -8,6 +8,7 @@ import JadeDescription from '../components/JadeDescription.astro';
 import JadeNotifyInput from '../components/JadeNotifyInput.astro';
 import JadeButton from '../components/JadeButton.astro';
 import MoreInformation from '../components/MoreInformation.astro';
+const date = import.meta.env.PUBLIC_DATE as string;
 ---
 
 <Layout title="Jade Coming Soon Template">
@@ -17,7 +18,7 @@ import MoreInformation from '../components/MoreInformation.astro';
 			<div class="z-10 w-[100%] md:w-[50%] md:flex md:flex-col md:mx-auto lg:w-[600px]">
 				<JadeTitle>Coming Soon</JadeTitle>
 				<JadeSlogan>¡We're working hard in something amazing!</JadeSlogan>
-				<Counter date="2025-12-01"/>
+				<Counter date={date} client:load/>
 				<ProgressBar percentage={35}/>
 				<JadeDescription/>
 				<JadeNotifyInput/>
