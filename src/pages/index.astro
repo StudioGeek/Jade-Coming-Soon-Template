@@ -30,7 +30,7 @@ const effect = import.meta.env.PUBLIC_EFFECT as string;
 		<MoreInformation/>
 	</main>
 </Layout>
-<script define:vars={{effect}}>
+<script is:inline define:vars={{effect}}>
 	(() => {
 		// It can be stars|bubbles|dots
 		let background_type = effect;
@@ -38,7 +38,7 @@ const effect = import.meta.env.PUBLIC_EFFECT as string;
 		let moreInformation = document.getElementById('more-information');
 		let btnShowInformation = document.getElementById('btn-show-information');
 		let btnCloseMoreInformation = document.getElementById('btn-close-more-information');
-		btnShowInformation.addEventListener('click', function(e){
+		btnShowInformation.addEventListener('click', function(){
 			moreInformation.classList.remove('hidden');
 			moreInformation.classList.add('animate__animated');
 			moreInformation.classList.add('animate__fadeIn');
@@ -157,7 +157,7 @@ const effect = import.meta.env.PUBLIC_EFFECT as string;
 					gradient: [ x - thisRadius / 2, y - thisRadius / 2, x + thisRadius, y + thisRadius ],
 				});
 			}
-			function changeCanvas(timestamp) {
+			function changeCanvas() {
 				ctx.clearRect(0, 0, canvas.width, canvas.height);
 				let adjX = 2;
 				let adjY = 2;

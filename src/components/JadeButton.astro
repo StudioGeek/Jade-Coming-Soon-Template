@@ -2,9 +2,6 @@
 const {type, id} = Astro.props;
 const primary_classes = 'bg-primary text-white';
 const secondary_classes = 'bg-secondary text-white';
-const semantic_classes = 'bg-semantic text-dark';
-const neutral_classes = 'bg-neutral text-white';
-const dark = 'bg-dark text-white';
 const classes = type === 'primary' ? primary_classes : secondary_classes;
 ---
 <button
