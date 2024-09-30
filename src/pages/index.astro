@@ -18,7 +18,7 @@ const effect = import.meta.env.PUBLIC_EFFECT as string;
 			<div class="z-10 w-[100%] md:w-[50%] md:flex md:flex-col md:mx-auto lg:w-[600px]">
 				<JadeTitle>Coming Soon</JadeTitle>
 				<JadeSlogan>¡We're working hard in something amazing!</JadeSlogan>
-				<Counter date={date} client:load/>
+				<Counter date={date} client:only="react"/>
 				<ProgressBar percentage={35}/>
 				<JadeDescription/>
 				<JadeNotifyInput/>
@@ -44,13 +44,9 @@ const effect = import.meta.env.PUBLIC_EFFECT as string;
 			moreInformation.classList.add('animate__fadeIn');
 		});
 		btnCloseMoreInformation.addEventListener('click', function(){
-			moreInformation.classList.add('animate__animated');
-			moreInformation.classList.add('animate__fadeOut')
-			setTimeout(() => {
-				moreInformation.classList.add('hidden');
-				moreInformation.classList.remove('animate__animated');
-				moreInformation.classList.remove('animate__fadeOut');
-			}, 500);
+			moreInformation.classList.add('hidden');
+			moreInformation.classList.remove('animate__animated');
+			moreInformation.classList.remove('animate__fadeIn');
 		});
 
 		if(background_type === 'stars')
@@ -200,7 +196,7 @@ const effect = import.meta.env.PUBLIC_EFFECT as string;
 			canvas.width = canvas.offsetWidth;
 			canvas.height = canvas.offsetHeight;
 			const ctx = canvas.getContext('2d');
-			const dots = [];
+			let dots = [];
 			const arrayColors = ['#eee', '#545454', '#596d91', '#bb5a68', '#696541'];
 			for (let index = 0; index < 50; index++) {
 				dots.push({

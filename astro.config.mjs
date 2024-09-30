@@ -8,5 +8,6 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   build: {
     assets: 'assets'
-  }
+  },
+  base: '/bubbles'
 });
