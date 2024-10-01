@@ -1,4 +1,4 @@
-# Jade Comming Soon Template
+# Jade Coming Soon Template
 
 ## Initialize project
 
